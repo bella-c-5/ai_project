@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Pilot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Page Title -->
+    <h1 class="title">Resume Pilot</h1>
+
+    <!-- Main Grid -->
+    <div class="container">
+
+        <!-- LEFT : Upload Box -->
+        <div class="panel">
+            <h2 class="panel-title">Scan Attachments</h2>
+
+            <div class="upload-section">
+                <input type="file" id="resumeFile" class="file-input">
+                <button id="analyzeBtn" class="analyze-btn" type="button">Analyze</button>
+            </div>
+        </div>
+
+        <!-- RIGHT : Results Box -->
+        <div class="panel">
+            <h2 class="panel-title">Scan Results</h2>
+
+            <div id="results" class="results-box">
+                <!-- results injected here -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

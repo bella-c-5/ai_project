@@ -1,0 +1,10 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Cache
+__pycache__/
+
+# Models
+*.pkl

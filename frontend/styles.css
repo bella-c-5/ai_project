@@ -1,0 +1,122 @@
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/* MAIN LAYOUT GRID */
+.container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 80px;
+}
+
+/* PANELS */
+.panel {
+    background: #d9d9d9;
+    width: 38%;
+    height: 500px;
+    border-radius: 40px;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.panel-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* UPLOAD SECTION */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.file-input {
+    background: white;
+    padding: 8px;
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.analyze-btn {
+    background: #aaaaaa;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.analyze-btn:hover {
+    background: #999999;
+}
+
+/* RESULTS BOX */
+.results-box {
+    margin-top: 40px;
+    background: #ffffff;
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    overflow-y: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* FIX: left-align all text, including lists */
+    text-align: left;
+}
+
+/* Resume results formatting */
+.analysis-container {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Remove all default bullet indentation */
+.improvements-list {
+    list-style-type: disc;     /* normal single bullets */
+    margin: 0;
+    padding-left: 20px;        /* proper left indent */
+}
+
+/* Fix bullet alignment */
+.improvements-list li {
+    margin: 4px 0;
+    padding-left: 5px;
+    text-align: left;
+}
+
+/* Completely kill weird extra spacing */
+.results-box p,
+.results-box li,
+.results-box h2,
+.results-box h3 {
+    text-align: left !important;
+}
+
+/* CUSTOM SCROLLBAR */
+.results-box::-webkit-scrollbar-thumb {
+    background: #717171;
+    border-radius: 10px;
+}
+
+.results-box::-webkit-scrollbar-track {
+    background: #bfbfbf;
+    border-radius: 10px;
+}
