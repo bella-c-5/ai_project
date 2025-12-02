@@ -1,16 +1,22 @@
 import os
 import joblib
 
+# Computes a policy-gradient–style resume quality score with 
+# - Section coverage (objective, skills, projects, achievements, education)
+# - A word count normalized by dataset mean & std
+
 THIS_DIR = os.path.dirname(__file__)
 SCORE_STATS_PATH = os.path.join(THIS_DIR, "score_stats.pkl")
 
 _stats = None
 
+# Lazy load scoring statistics - mean/std of word count
 def _load():
     global _stats
     if _stats is None:
         _stats = joblib.load(SCORE_STATS_PATH)
 
+# Computes score: 65% section coverage, 35% normalized length score
 def policy_gradient_score(section_flags, word_count):
     """
     section_flags: [objective, projects, achievements, skills, education]

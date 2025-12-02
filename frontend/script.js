@@ -3,7 +3,7 @@ document.getElementById("analyzeBtn").addEventListener("click", async () => {
     const results = document.getElementById("results");
 
     if (!fileInput.files.length) {
-        results.innerHTML = "<p>Please upload a file first.</p>";
+        results.innerHTML = "<p>Please upload a PDF file first.</p>";
         return;
     }
 
@@ -42,6 +42,11 @@ document.getElementById("analyzeBtn").addEventListener("click", async () => {
                     ${data.mdp_actions.map(a =>
                         `<li>${a.section}: ${a.action}</li>`
                     ).join("")}
+                </ul>
+
+                <h3>Keywords</h3>
+                <ul class="improvements-list">
+                    ${data.important_words.map(w => `<li>${w}</li>`).join("")}
                 </ul>
 
             </div>

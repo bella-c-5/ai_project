@@ -1,22 +1,21 @@
 import torch
 import torch.nn as nn
 
-# uses multi-head self-attention - gpt - to determine which parts of the resume text are important
-# outputs attention weights for token importance
-
-# embeds token IDs into vectors using an embedding layer
-# runs them through nn.MultiheadAttention
-# runs an importance vector by averaging attention scores
-# results show which words the model focuses on
+# A basic PyTorch multi-head attention module - computes token importance weights for resume text
+# Not currently called in app.py but can be used for visualization or advanced features
 
 class ResumeAttention(nn.Module):
     def __init__(self, embed_dim=64):
         super().__init__()
+        # Converts token IDs into embeddings
         self.embedding = nn.Embedding(5000, embed_dim)
+        # Multi-head self-attention - 4 heads
         self.attn = nn.MultiheadAttention(embed_dim, num_heads=4)
 
     def forward(self, tokens):
+        # Apply embedding layer
         embeddings = self.embedding(tokens)
+        # Compute attention and get weights
         attn_output, attn_weights = self.attn(embeddings, embeddings, embeddings)
-        # return average importance per token
+        # Returns averaged attention across heads and query positions
         return attn_weights.mean(dim=1).mean(dim=0)

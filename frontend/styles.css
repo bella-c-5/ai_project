@@ -1,4 +1,3 @@
-/* GENERAL */
 body {
     font-family: Arial, sans-serif;
     background: #ffffff;
@@ -13,7 +12,7 @@ body {
     font-weight: bold;
 }
 
-/* MAIN LAYOUT GRID */
+/* main layout */
 .container {
     margin-top: 60px;
     display: flex;
@@ -21,7 +20,7 @@ body {
     padding: 0 80px;
 }
 
-/* PANELS */
+/* panels */
 .panel {
     background: #d9d9d9;
     width: 38%;
@@ -37,7 +36,15 @@ body {
     margin-bottom: 30px;
 }
 
-/* UPLOAD SECTION */
+.tagline {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* upload section */
 .upload-section {
     display: flex;
     flex-direction: column;
@@ -67,7 +74,7 @@ body {
     background: #999999;
 }
 
-/* RESULTS BOX */
+/* results box */
 .results-box {
     margin-top: 40px;
     background: #ffffff;
@@ -77,32 +84,30 @@ body {
     overflow-y: scroll;
     padding: 20px;
     box-sizing: border-box;
-
-    /* FIX: left-align all text, including lists */
     text-align: left;
 }
 
-/* Resume results formatting */
+/* resume-results formatting */
 .analysis-container {
     font-size: 15px;
     line-height: 1.5;
 }
 
-/* Remove all default bullet indentation */
+/* removes all default bullet indentation */
 .improvements-list {
-    list-style-type: disc;     /* normal single bullets */
+    list-style-type: disc;
     margin: 0;
-    padding-left: 20px;        /* proper left indent */
+    padding-left: 20px;
 }
 
-/* Fix bullet alignment */
+/* fix bullet alignment */
 .improvements-list li {
     margin: 4px 0;
     padding-left: 5px;
     text-align: left;
 }
 
-/* Completely kill weird extra spacing */
+/* kills extra spacing */
 .results-box p,
 .results-box li,
 .results-box h2,
@@ -110,7 +115,7 @@ body {
     text-align: left !important;
 }
 
-/* CUSTOM SCROLLBAR */
+/* custom scrollbar */
 .results-box::-webkit-scrollbar-thumb {
     background: #717171;
     border-radius: 10px;
