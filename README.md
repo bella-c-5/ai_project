@@ -26,10 +26,6 @@ The resume receives a score by learning a probability-based reward model.
 ### **5. PyTorch Self-Attention**
 Importance is highlighted across text tokens by utlizing a simplified transformer-style module.
 
-### **6. Full-Stack Architecture**
-- **Backend:** FastAPI (Python)
-- **Frontend:** HTML, CSS, JavaScript
-
 ---
 
 ## Project Structure
@@ -77,17 +73,20 @@ Follow these steps to run the project locally.
 git clone https://github.com/bella-c-5/ai_project.git
 cd ai_project
 
-### **2. Create a virtual environment
+### **2. Create a virtual environment**
 python3 -m venv .venv
 source .venv/bin/activate   (Personally using MacOS)
 
-### **3. Install packages
+### **3. Install packages**
 pip install fastapi uvicorn pdfminer.six pandas scikit-learn pillow torch python-multipart spacy
 
-### **4. Run FastAPI backend
+### **4. Run**
+python ai_models/train_models.py
+
+### **5. Run FastAPI backend**
 uvicorn app:app --reload
 
-### **5. Click server link
+### **6. Click server link**
 
 ## Usage
 
