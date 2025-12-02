@@ -8,4 +8,5 @@ __pycache__/
 
 # Models
 *.pkl
+
 data/resumes_uploaded/
